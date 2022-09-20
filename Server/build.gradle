@@ -42,7 +42,7 @@ dependencies {
   	implementation 'javax.servlet:jstl'
   	// 외장 톰캣 사용
 	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
-	
+	// junit 테스트
 	testImplementation("org.junit.vintage:junit-vintage-engine") {          
 		exclude group: "org.hamcrest", module: "hamcrest-core"
 	}
