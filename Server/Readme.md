@@ -10,3 +10,6 @@ https://bamdule.tistory.com/234 <hr>
 ![image](https://user-images.githubusercontent.com/110449133/191161028-631ac2a7-fd7c-4049-abc1-e76f234c452b.png)
 ![image](https://user-images.githubusercontent.com/110449133/191160686-c01fb043-9132-4fb5-8a2a-75962fb54bbb.png)
 ![image](https://user-images.githubusercontent.com/110449133/191160715-850f008e-63f8-496b-b5b9-3d32e8ff05e9.png) <hr>
+
+# [이슈관리 004] import 시 gradle 프로젝트 열리지 않는 문제 해결 방법
+settings.gradle / rootProject.name 을 대소문자 및 현재 프로젝트가 있는 폴더명칭으로 수정! 특히 대소문자 확인 할 것
