@@ -15,21 +15,21 @@ public class HumanResourcesController {
 	@GetMapping("/info")
 	public ModelAndView getInfo() {
 		log.info("-----인적 정보");
-		ModelAndView mav = new ModelAndView("human_info");
+		ModelAndView mav = new ModelAndView("/human/info");
 		return mav;
 	}
 	
 	@GetMapping("/attend")
 	public ModelAndView getAttend() {
 		log.info("-----출결 정보");
-		ModelAndView mav = new ModelAndView("human_attend");
+		ModelAndView mav = new ModelAndView("/human/attend");
 		return mav;
 	}
 	
 	@GetMapping("/vacation")
 	public ModelAndView getVacation() {
 		log.info("-----휴가 정보");
-		ModelAndView mav = new ModelAndView("human_vacation");
+		ModelAndView mav = new ModelAndView("/human/vacation");
 		return mav;
 	}
 }

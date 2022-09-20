@@ -15,21 +15,21 @@ public class ProjectManagementController {
 	@GetMapping("/members")
 	public ModelAndView getInMem() {
 		log.info("-----투입 인원 관리");
-		ModelAndView mav = new ModelAndView("project_members");
+		ModelAndView mav = new ModelAndView("/project/members");
 		return mav;
 	}
 	
 	@GetMapping("/info")
 	public ModelAndView getProInfo() {
 		log.info("-----프로젝트 정보 관리");
-		ModelAndView mav = new ModelAndView("project_info");
+		ModelAndView mav = new ModelAndView("/project/info");
 		return mav;
 	}
 	
 	@GetMapping("/schedual")
 	public ModelAndView getEquip() {
 		log.info("-----프로젝트 일정 관리");
-		ModelAndView mav = new ModelAndView("project_schedual");
+		ModelAndView mav = new ModelAndView("/project/schedual");
 		return mav;
 	}
 }

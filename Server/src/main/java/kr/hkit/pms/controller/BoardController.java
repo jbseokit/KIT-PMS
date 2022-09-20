@@ -15,21 +15,21 @@ public class BoardController {
 	@GetMapping("/free")
 	public ModelAndView getFree() {
 		log.info("-----자유게시판");
-		ModelAndView mav = new ModelAndView("board_free");
+		ModelAndView mav = new ModelAndView("/board/free");
 		return mav;
 	}
 	
 	@GetMapping("/notice")
 	public ModelAndView getNotice() {
 		log.info("-----공지사항");
-		ModelAndView mav = new ModelAndView("board_notice");
+		ModelAndView mav = new ModelAndView("/board/notice");
 		return mav;
 	}
 	
 	@GetMapping("/ref")
 	public ModelAndView getRef() {
 		log.info("-----자료실");
-		ModelAndView mav = new ModelAndView("board_ref");
+		ModelAndView mav = new ModelAndView("/board/ref");
 		return mav;
 	}
 }

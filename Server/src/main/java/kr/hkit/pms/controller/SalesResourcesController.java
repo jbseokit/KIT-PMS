@@ -15,14 +15,14 @@ public class SalesResourcesController {
 	@GetMapping("/agency")
 	public ModelAndView getAgency() {
 		log.info("-----기관 정보 관리");
-		ModelAndView mav = new ModelAndView("sales_agency");
+		ModelAndView mav = new ModelAndView("/sales/agency");
 		return mav;
 	}
 	
 	@GetMapping("/spend")
 	public ModelAndView getEquip() {
 		log.info("-----지출 관리");
-		ModelAndView mav = new ModelAndView("sales_spend");
+		ModelAndView mav = new ModelAndView("/sales/spend");
 		return mav;
 	}
 }

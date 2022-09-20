@@ -15,21 +15,21 @@ public class MaterialResourcesController {
 	@GetMapping("/equip")
 	public ModelAndView getEquip() {
 		log.info("-----장비 정보 관리");
-		ModelAndView mav = new ModelAndView("material_equip");
+		ModelAndView mav = new ModelAndView("/material/equip");
 		return mav;
 	}
 	
 	@GetMapping("/fac")
 	public ModelAndView getFac() {
 		log.info("-----시설 관리");
-		ModelAndView mav = new ModelAndView("material_fac");
+		ModelAndView mav = new ModelAndView("/material/fac");
 		return mav;
 	}
 	
 	@GetMapping("/sw")
 	public ModelAndView getInfo() {
 		log.info("-----SW 정보 관리");
-		ModelAndView mav = new ModelAndView("material_sw");
+		ModelAndView mav = new ModelAndView("/material/sw");
 		return mav;
 	}
 }
