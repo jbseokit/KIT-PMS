@@ -6,6 +6,6 @@ https://sangmaeng.tistory.com/82
 https://useyno.tistory.com/52
 위 사이트 참고하셔서 lombok.jar 파일 다운로드 및 이클립스 재실행하면 되겠습니다.
 # [이슈관리 003] AES256 암호화
-https://bamdule.tistory.com/234<hr>
+https://bamdule.tistory.com/234 <hr>
 ![image](https://user-images.githubusercontent.com/110449133/191160686-c01fb043-9132-4fb5-8a2a-75962fb54bbb.png)
 ![image](https://user-images.githubusercontent.com/110449133/191160715-850f008e-63f8-496b-b5b9-3d32e8ff05e9.png)
