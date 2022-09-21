@@ -43,4 +43,5 @@ public class HumanResourcesController {
 		mav.addObject("humanVacation", hrs.getVacationList());
 		return mav;
 	}
+	
 }
