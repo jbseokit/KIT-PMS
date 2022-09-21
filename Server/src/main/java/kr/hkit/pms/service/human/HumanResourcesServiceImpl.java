@@ -36,7 +36,4 @@ public class HumanResourcesServiceImpl implements HumanResourcesService {
 		return vmm.getList();
 	}
 	
-	
-
-	
 }
