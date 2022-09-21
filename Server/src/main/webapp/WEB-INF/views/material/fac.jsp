@@ -1,12 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
+<%@ include file="/WEB-INF/views/includes/header.jsp" %>
 	<h2>시설 관리 정보</h2>
-</body>
-</html>
+<%@ include file="/WEB-INF/views/includes/footer.jsp"%>

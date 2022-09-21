@@ -1,10 +1,12 @@
 package kr.hkit.pms.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
+import kr.hkit.pms.service.human.HumanResourcesService;
 import lombok.extern.log4j.Log4j2;
 
 @Log4j2
@@ -12,10 +14,15 @@ import lombok.extern.log4j.Log4j2;
 @RequestMapping("/human/*")
 public class HumanResourcesController {
 	
+	@Autowired
+	HumanResourcesService hrs;
+	
 	@GetMapping("/info")
 	public ModelAndView getInfo() {
 		log.info("-----인적 정보");
-		ModelAndView mav = new ModelAndView("/human/info");
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("/human/info");
+		mav.addObject("humanInfo", hrs.getList());
 		return mav;
 	}
 	
