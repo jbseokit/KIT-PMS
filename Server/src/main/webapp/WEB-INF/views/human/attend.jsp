@@ -2,4 +2,5 @@
     pageEncoding="UTF-8"%>
 <%@ include file="/WEB-INF/views/includes/header.jsp" %>
 	<h2>출결 정보</h2>
+	${humanAttend }
 <%@ include file="/WEB-INF/views/includes/footer.jsp"%>

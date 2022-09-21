@@ -22,21 +22,25 @@ public class HumanResourcesController {
 		log.info("-----인적 정보");
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("/human/info");
-		mav.addObject("humanInfo", hrs.getList());
+		mav.addObject("humanInfo", hrs.getInfoList());
 		return mav;
 	}
 	
 	@GetMapping("/attend")
 	public ModelAndView getAttend() {
 		log.info("-----출결 정보");
-		ModelAndView mav = new ModelAndView("/human/attend");
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("/human/attend");
+		mav.addObject("humanAttend", hrs.getAttendList());
 		return mav;
 	}
 	
 	@GetMapping("/vacation")
 	public ModelAndView getVacation() {
 		log.info("-----휴가 정보");
-		ModelAndView mav = new ModelAndView("/human/vacation");
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("/human/vacation");
+		mav.addObject("humanVacation", hrs.getVacationList());
 		return mav;
 	}
 }

@@ -7,6 +7,6 @@
 
 
 	<h2>휴가 정보</h2>
-	
+	${humanVacation }
 	
 <%@ include file="/WEB-INF/views/includes/footer.jsp"%>
