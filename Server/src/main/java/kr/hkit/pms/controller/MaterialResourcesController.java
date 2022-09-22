@@ -22,7 +22,7 @@ public class MaterialResourcesController {
 		log.info("-----장비 정보 관리");
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("/material/equip");
-		mav.addObject("list", service.getAll() );
+		mav.addObject("list", service.getAll());
 		return mav;
 	}
 	

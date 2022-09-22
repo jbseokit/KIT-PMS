@@ -59,9 +59,9 @@
                             </a>
                             <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="/human/info">인적 정보 관리</a>
-                                    <a class="nav-link" href="/human/attend">출결 관리</a>
-                                    <a class="nav-link" href="/human/vacation">휴가 관리</a>
+                                    <a class="nav-link" href="/human/hr-list">인적 정보 관리</a>
+                                    <a class="nav-link" href="/human/at-list">출결 관리</a>
+                                    <a class="nav-link" href="/human/va-list">휴가 관리</a>
                                 </nav>
                             </div>
                             
