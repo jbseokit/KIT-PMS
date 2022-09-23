@@ -9,7 +9,7 @@
   <tr>
       <th> </th> 
       <th>Mapper</th> 
-      <th>Service</th>
+      <th>Service & jsp</th>
       <th>Uri</th>
   </tr>
   <tr>
