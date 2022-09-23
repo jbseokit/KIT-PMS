@@ -22,6 +22,6 @@
       <td> U </td> <td> update </td> <td> modify(구분자) </td> <td>(구분자)-modify</td>
   </tr>
   <tr>
-      <td> D </td> <td> delte </td> <td> remove(구분자) </td> <td>(구분자)-remove</td>
+      <td> D </td> <td> delete </td> <td> remove(구분자) </td> <td>(구분자)-remove</td>
   </tr>
 </table>
