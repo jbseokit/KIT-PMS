@@ -29,34 +29,73 @@ public class HumanResourcesServiceImpl implements HumanResourcesService {
 	
 	// -----------------------------hr Service-----------------------------
 	
-	// 페이징 처리 List
+	// R
 	@Override
 	public List<HumanInfoMgtDto> selectHrList(Criteria cri) {
 		return hmm.readList(cri);
 	}
 	
 	@Override
+	public HumanInfoMgtDto selectHr(String mbr_sn) {
+		log.info("-----hr select serivce");
+		return hmm.read(mbr_sn);
+	}
+	
+	// C
+	@Override
 	public void registerHr(HumanInfoMgtDto human) {
 		log.info("-----hr 등록 서비스");
 		hmm.create(human);
-		
 	}
 	
+	// U
+	@Override
+	public void modifyHr(HumanInfoMgtDto human) {
+		log.info("-----hr 수정 서비스");
+		hmm.update(human);
+	}
+	
+	// D
+	@Override
+	public String removeHr(String mbr_sn) {
+		log.info("-----hr 삭제 서비스");
+		hmm.delete(mbr_sn);
+		log.info("삭제 되었는가? : " + hmm.deleteName(mbr_sn));
+		return hmm.deleteName(mbr_sn);
+	}
+	
+	
 	// -----------------------------at service-----------------------------
+	
+	@Override
+	public List<AttendMgtDto> selectAtList(Criteria cri) {
+		return admm.readList(cri);
+	}
 	
 
 
 	@Override
-	public List<AttendMgtDto> selectAtList(Criteria cri) {
-		return admm.getList();
+	public void registerAt(AttendMgtDto attend) {
+		log.info("-----at 등록 서비스");
+		admm.create(attend);
+		
 	}
 	
 	// -----------------------------va service-----------------------------
 	
+
+
 	@Override
 	public List<VacationMgtDto> selectVaList(Criteria cri) {
-		return vmm.getList();
+		return vmm.readList(cri);
 	}
 
+
+	@Override
+	public void registerVa(VacationMgtDto vacation) {
+		log.info("-----va 등록 서비스");
+		vmm.create(vacation);
+		
+	}
 	
 }

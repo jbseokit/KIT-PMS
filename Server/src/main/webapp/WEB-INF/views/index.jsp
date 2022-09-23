@@ -80,7 +80,7 @@
 				if (password.value == '0000') {
 					errStack -= 5;
 					alert('로그인 되었습니다!')
-					location.href = "/human/info" ;
+					location.href = "/human/hr-list" ; //jsp 호출
 				}
 				else {
 					alert('아이디와 비밀번호를 다시 한 번 확인해주세요!')

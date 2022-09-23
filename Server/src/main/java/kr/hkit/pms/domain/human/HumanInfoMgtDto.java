@@ -35,4 +35,11 @@ public class HumanInfoMgtDto {
 	private Date	rgtr_dt;
 	private String	mdfr_id;
 	private Date	mdfr_dt;
+	
+	public HumanInfoMgtDto(String mbr_nm) {
+		super();
+		this.mbr_nm = mbr_nm;
+	}
+	
+	
 }

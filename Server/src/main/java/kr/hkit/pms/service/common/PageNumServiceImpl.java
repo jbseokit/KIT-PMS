@@ -13,8 +13,18 @@ public class PageNumServiceImpl implements PageNumService {
 	private PageNumMapper pnm;
 	
 	@Override
-	public int getTotal(Criteria cri) {
-		return pnm.getTotalCount(cri);
+	public int getTotalHr(Criteria cri) {
+		return pnm.getTotalCountHr(cri);
+	}
+	
+	@Override
+	public int getTotalAt(Criteria cri) {
+		return pnm.getTotalCountAt(cri);
+	}
+	
+	@Override
+	public int getTotalVa(Criteria cri) {
+		return pnm.getTotalCountVa(cri);
 	}
 	
 }

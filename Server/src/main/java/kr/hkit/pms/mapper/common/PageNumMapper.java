@@ -6,5 +6,9 @@ import kr.hkit.pms.domain.common.Criteria;
 
 @Mapper
 public interface PageNumMapper {
-	public int getTotalCount(Criteria cri);
+	public int getTotalCountHr(Criteria cri);
+	
+	public int getTotalCountAt(Criteria cri);
+	
+	public int getTotalCountVa(Criteria cri);
 }

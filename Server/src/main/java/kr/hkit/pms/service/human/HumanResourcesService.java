@@ -10,13 +10,18 @@ import kr.hkit.pms.domain.human.VacationMgtDto;
 public interface HumanResourcesService {
 	// -----------------------------hr Service-----------------------------
 	
-	//public List<HumanInfoMgtDto> getInfoList();
-	
-	
+	// R
 	public List<HumanInfoMgtDto> selectHrList(Criteria cri);
+	public HumanInfoMgtDto selectHr(String mbr_sn);
 	
+	// C
 	public void registerHr(HumanInfoMgtDto human);
 	
+	// U
+	public void modifyHr(HumanInfoMgtDto human);
+	
+	// D
+	public String removeHr(String mbr_sn);
 	
 	// -----------------------------at service-----------------------------
 	
@@ -25,7 +30,8 @@ public interface HumanResourcesService {
 	
 	
 	
-	public List<AttendMgtDto> selectAtList(Criteria cri); 
+	public List<AttendMgtDto> selectAtList(Criteria cri);
+	public void registerAt(AttendMgtDto attend);
 	
 	
 	
@@ -37,6 +43,7 @@ public interface HumanResourcesService {
 	
 	
 	public List<VacationMgtDto> selectVaList(Criteria cri);
+	public void registerVa(VacationMgtDto vacation);
 	
 	
 	

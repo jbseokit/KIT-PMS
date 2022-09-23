@@ -20,6 +20,6 @@ public class MapperTest {
 
     @Test
     public void test1() {
-        log.info(amm.getList());
+        log.info(amm.read());
     }
 }
