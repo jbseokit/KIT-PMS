@@ -14,18 +14,16 @@
 		</nav>
 		<div class="card mb-2">
 			<form role="form" action="/human/hr-modify" method="post">
-				<div>
-					<button type="submit" class="btn btn-primary">수정</button>
-					<button type="reset" class="btn btn-danger" onclick="history.back(-1)">취소</button>
-				</div>
+
+				<div class="panel-heading">*는 필수입력 항목입니다</div>
 				<div class="form-group">
-					<label>사번</label> <input class="form-control" name='mbr_sn'
+					<label>*사번</label> <input class="form-control" name='mbr_sn'
 						value='${human.mbr_sn}' readonly>
 				</div>
 				<br>
 
 				<div class="form-group">
-					<label>이름</label> <input class="form-control" name='mbr_nm'
+					<label>*이름</label> <input class="form-control" name='mbr_nm'
 						value='${human.mbr_nm}' readonly>
 				</div>
 				<br>
@@ -37,7 +35,7 @@
 				<br>
 
 				<div class="form-group">
-					<label>전화번호</label> <input class="form-control" name='mbr_phone'
+					<label>*전화번호</label> <input class="form-control" name='mbr_phone'
 						value='${human.mbr_phone}'>
 				</div>
 				<br>
@@ -49,7 +47,7 @@
 				<br>
 
 				<div class="form-group">
-					<label>주소</label> <input class="form-control" name='mbr_addr_bx'
+					<label>*주소</label> <input class="form-control" name='mbr_addr_bx'
 						value='${human.mbr_addr_bx}'>
 				</div>
 				<br>
@@ -61,13 +59,13 @@
 				<br>
 
 				<div class="form-group">
-					<label>우편번호</label> <input class="form-control"
+					<label>*우편번호</label> <input class="form-control"
 						name='mbr_addr_post' value='${human.mbr_addr_post}'>
 				</div>
 				<br>
 
 				<div class="form-group">
-					<label>부서번호</label> <input class="form-control" name='mbr_dep_cd'
+					<label>*부서번호</label> <input class="form-control" name='mbr_dep_cd'
 						value='${human.mbr_dep_cd}'>
 				</div>
 				<br>
@@ -80,13 +78,13 @@
 				<br>
 
 				<div class="form-group">
-					<label>아이디</label> <input class="form-control" name='mbr_id'
+					<label>*아이디</label> <input class="form-control" name='mbr_id'
 						value='${human.mbr_id}' readonly>
 				</div>
 				<br>
 
 				<div class="form-group">
-					<label>비밀번호</label> <input class="form-control" name='mbr_pw'
+					<label>*비밀번호</label> <input class="form-control" name='mbr_pw'
 						value='${human.mbr_pw}'>
 				</div>
 				<br>
@@ -96,6 +94,11 @@
 						value='${human.mbr_cls_cd}'>
 				</div>
 				<br>
+				<div>
+					<button type="submit" class="btn btn-primary">수정</button>
+					<button type="reset" class="btn btn-danger"
+						onclick="history.back(-1)">취소</button>
+				</div>
 			</form>
 		</div>
 	</div>

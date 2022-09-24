@@ -25,27 +25,30 @@ public interface HumanResourcesService {
 	
 	// -----------------------------at service-----------------------------
 	
-	
-	//public List<AttendMgtDto> getAttendList(); 
-	
-	
-	
+	// R
 	public List<AttendMgtDto> selectAtList(Criteria cri);
+	public AttendMgtDto selectAt(String atd_sn);
+	
+	// C
 	public void registerAt(AttendMgtDto attend);
 	
+	// U
+	public void modifyAt(String atd_sn);
 	
 	
 	
 	// -----------------------------va service-----------------------------
 	
 	
-	//public List<VacationMgtDto> getVacationList();
-	
-	
+	// R
 	public List<VacationMgtDto> selectVaList(Criteria cri);
+	public VacationMgtDto selectVa(String vac_sn);
+	
+	// C
 	public void registerVa(VacationMgtDto vacation);
 	
-	
+	// U
+	public void modifyVa(VacationMgtDto vacation);
 	
 	
 }

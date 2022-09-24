@@ -9,7 +9,7 @@
 		<h1 class="mt-4">출결 관리</h1>
 
 		<div class="panel-heading">
-			<button id="regBtn" type="button" class="btn btn-primary">등록</button>
+			<button id="regBtn" type="button" class="btn btn-primary">출근 등록</button>
 		</div>
 
 		<nav class="navbar bg-light">
@@ -39,7 +39,8 @@
 						<c:forEach items="${humanAttend}" var="attend">
 							<tr>
 								<td><c:out value="${attend.idx}" /></td>
-								<td><c:out value="${attend.atd_sn}" /></td>
+								<td><a class='move' href='<c:out value="${attend.atd_sn}"/>'><c:out
+											value="${attend.atd_sn}" /></a></td>
 								<td><c:out value="${attend.atd_nm}" /></td>
 								<td><fmt:formatDate pattern="yyyy-MM-dd HH24:MM:SS"
 										value="${attend.atd_gw}" /></td>
@@ -110,14 +111,15 @@
 		$(".move").on("click", function(e) {
 			e.preventDefault();
 			actionForm.append("<input type='hidden' name='atd_sn' value='" + $(this).attr("href") + "'>");
-			actionForm.attr('action', '#');
-			// 상세페이지 넣기
+			actionForm.attr('action', '/human/at');
 			actionForm.submit();
+
 		});
 		
 		$("#regBtn").on("click", function(e){
 			self.location="/human/at-register";
 		});
+		
 		
 	});
 </script>

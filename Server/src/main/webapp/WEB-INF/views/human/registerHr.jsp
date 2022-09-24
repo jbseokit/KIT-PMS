@@ -54,7 +54,7 @@
 			        </div><br>
 			        
 			        <div class="form-group">
-			            <label>입사일</label> <input class="form-control" name='mbr_hired_d'>
+			            <label>입사일(0000/00/00)</label> <input class="form-control" name='mbr_hired_d'>
 			        </div><br>
 			        
 			        <div class="form-group">
@@ -70,7 +70,7 @@
 			    	</div>
 		        	<br>      
 		        <button type="submit" class="btn btn-primary">완료</button>
-		        <button type="reset" class="btn btn-danger" >취소</button>
+		        <button type="reset" class="btn btn-danger" onclick="history.back(-1)">취소</button>
 			</form>
 		</div>
 		<div style="height: 100vh"></div>

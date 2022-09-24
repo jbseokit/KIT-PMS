@@ -67,13 +67,19 @@ public class HumanResourcesServiceImpl implements HumanResourcesService {
 	
 	// -----------------------------at service-----------------------------
 	
+	// R
 	@Override
 	public List<AttendMgtDto> selectAtList(Criteria cri) {
 		return admm.readList(cri);
 	}
 	
-
-
+	@Override
+	public AttendMgtDto selectAt(String atd_sn) {
+		return admm.read(atd_sn);
+	}
+	
+	
+	// C
 	@Override
 	public void registerAt(AttendMgtDto attend) {
 		log.info("-----at 등록 서비스");
@@ -81,20 +87,40 @@ public class HumanResourcesServiceImpl implements HumanResourcesService {
 		
 	}
 	
+	// U
+	@Override
+	public void modifyAt(String atd_sn) {
+		admm.update(atd_sn);
+		
+	}
+	
 	// -----------------------------va service-----------------------------
 	
 
-
+	// R
 	@Override
 	public List<VacationMgtDto> selectVaList(Criteria cri) {
 		return vmm.readList(cri);
 	}
+	
 
-
+	@Override
+	public VacationMgtDto selectVa(String vac_sn) {
+		return vmm.read(vac_sn);
+	}
+	
+	// C
 	@Override
 	public void registerVa(VacationMgtDto vacation) {
 		log.info("-----va 등록 서비스");
 		vmm.create(vacation);
+		
+	}
+	
+	// U
+	@Override
+	public void modifyVa(VacationMgtDto vacation) {
+		vmm.update(vacation);
 		
 	}
 	

@@ -9,13 +9,16 @@ import kr.hkit.pms.domain.human.VacationMgtDto;
 
 @Mapper
 public interface VacationMgtMapper {
-	// 페이징 적용
+	// R
 	public List<VacationMgtDto> readList(Criteria cri);
-	public VacationMgtDto read();
+	public VacationMgtDto read(String vac_sn);
 	
+	// C
 	public void create(VacationMgtDto vacation); 
 	
-	public void update();
+	// U
+	public void update(VacationMgtDto vacation);
 	
+	// D
 	public void delete();
 }

@@ -9,12 +9,16 @@ import kr.hkit.pms.domain.human.AttendMgtDto;
 
 @Mapper
 public interface AttendanceMgtMapper {
+	// R
 	public List<AttendMgtDto> readList(Criteria cri);
-	public AttendMgtDto read();
+	public AttendMgtDto read(String atd_sn);
 	
+	// C
 	public void create(AttendMgtDto attend);
 	
-	public void update();
+	// U
+	public void update(String atd_sn);
 	
+	// D
 	public void delete();
 }

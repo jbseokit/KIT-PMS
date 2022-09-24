@@ -76,8 +76,8 @@
 		
 		
 		login.addEventListener('click', () => {
-			if (id.value == 'acid') {
-				if (password.value == '0000') {
+			if (id.value == 'admin') {
+				if (password.value == '1234') {
 					errStack -= 5;
 					alert('로그인 되었습니다!')
 					location.href = "/human/hr-list" ; //jsp 호출

@@ -36,7 +36,8 @@
 				<c:forEach items="${humanVacation}" var="vacation">
 					<tr>
 						<td><c:out value="${vacation.idx}" /></td>
-						<td><c:out value="${vacation.vac_sn}" /></td>
+						<td><a class='move' href='<c:out value="${vacation.vac_sn}"/>'><c:out
+											value="${vacation.vac_sn}" /></a></td>
 						<td><c:out value="${vacation.vac_nm}" /></td>
 						<td><fmt:formatDate pattern="yyyy-MM-dd" 
 											value="${vacation.vac_str}" /></td>
@@ -103,7 +104,7 @@
 		$(".move").on("click", function(e) {
 			e.preventDefault();
 			actionForm.append("<input type='hidden' name='vac_sn' value='" + $(this).attr("href") + "'>");
-			actionForm.attr('action', '#');
+			actionForm.attr('action', '/human/va');
 			// 상세페이지 넣기
 			actionForm.submit();
 		});

@@ -7,69 +7,47 @@
 
 <main>
 	<div class="container-fluid px-4">
-		<h1 class="mt-4">사원 조회</h1>
+		<h1 class="mt-4">퇴근</h1>
 			<div>   
-	        	<button data-oper = "modify" class="btn btn-primary" onclick = "location.href = '/human/hr-modify?mbr_sn=${human.mbr_sn}'">수정</button>
-	            <button data-oper = "list" class="btn btn-info" onclick = "location.href = '/human/hr-list'">목록</button>
-	            <button data-oper = "remove" class="btn btn-danger" onclick = "location.href = '/human/hr-remove?mbr_sn=${human.mbr_sn}'">삭제</button>
+	        	<button data-oper = "modify" class="btn btn-primary" onclick = "location.href = '/human/at-modify?atd_sn=${attend.atd_sn}'">퇴근</button>
+	            <button data-oper = "list" class="btn btn-info" onclick = "location.href = '/human/at-list'">목록</button>
             </div><p>
 			
 			<div class="card mb-2">
 			      	<div class="form-group">
-			      		<label>사번</label> <input class="form-control" name='mbr_sn' value='${human.mbr_sn}' readonly>
+			      		<label>사번</label> <input  class="form-control" name='atd_sn' value='${attend.atd_sn}' readonly>
 			    	</div><br>
 			
 			      	<div class="form-group">
-			      		<label>이름</label> <input class="form-control" name='mbr_nm' value='${human.mbr_nm}' readonly>
+			      		<label>이름</label> <input  class="form-control" name='atd_nm' value='${attend.atd_nm}' readonly>
 				  	</div><br>
 					
 					<div class="form-group">
-			            <label>사내번호</label> <input class="form-control" name='mbr_tel' value='${human.mbr_tel}' readonly>
+			            <label>출장 여부(Y/N)</label> <input  class="form-control" name='atd_bt' value='${attend.atd_bt}' readonly>
 			        </div><br>
 			        
 			        <div class="form-group">
-			            <label>전화번호</label> <input class="form-control" name='mbr_phone' value='${human.mbr_phone}' readonly>
+			            <label>출장 기간</label> <input  class="form-control" name='atd_bt_dt' value='${attend.atd_bt_dt}' readonly>
 			        </div><br>
 			        
 			        <div class="form-group">
-			            <label>이메일</label> <input class="form-control" name='mbr_em' value='${human.mbr_em}' readonly>
+			            <label>출장 지역</label> <input  class="form-control" name='atd_bt_ct' value='${attend.atd_bt_ct}' readonly>
 			        </div><br>
 			        
 			        <div class="form-group">
-			            <label>주소</label> <input class="form-control" name='mbr_addr_bx' value='${human.mbr_addr_bx}' readonly>
+			            <label>파견 여부(Y/N)</label> <input  class="form-control" name='atd_dp' value='${attend.atd_dp}' readonly>
 			        </div><br>
 			        
 			        <div class="form-group">
-			            <label>상세주소</label> <input class="form-control" name='mbr_addr_dtl' value='${human.mbr_addr_dtl}' readonly>
+			            <label>파견 기간</label> <input  class="form-control" name='atd_dp_dt' value='${attend.atd_dp_dt}' readonly>
 			        </div><br>
 			        
 			        <div class="form-group">
-			            <label>우편번호</label> <input class="form-control" name='mbr_addr_post' value='${human.mbr_addr_post}' readonly>
+			            <label>파견 지역</label> <input  class="form-control" name='atd_dp_ct' value='${attend.atd_dp_ct}' readonly>
 			        </div><br>
-			        
-			        <div class="form-group">
-			            <label>부서번호</label> <input class="form-control" name='mbr_dep_cd' value='${human.mbr_dep_cd}' readonly>
-			        </div><br>
-			        
-			        <div class="form-group">
-			            <label>입사일</label> <input class="form-control" name='mbr_hired_d' 
-			            		value='<fmt:formatDate pattern="yyyy/MM/dd" value="${human.mbr_hired_d}" />' readonly> 
-			        </div><br>
-			        
-			        <div class="form-group">
-			            <label>아이디</label> <input class="form-control" name='mbr_id' value='${human.mbr_id}' readonly>
-			        </div><br>
-			        
-			        <div class="form-group">
-			            <label>비밀번호</label> <input class="form-control" name='mbr_pw' value='${human.mbr_pw}' readonly>
-			        </div><br>
-			        
-			        <div class="form-group">
-			            <label>직급코드</label> <input class="form-control" name='mbr_cls_cd' value='${human.mbr_cls_cd}' readonly>
-			    	</div><br>  
 		          	
 					<form id="operForm" action="/board/modify" method="get">
-			      		<input type='hidden' id='mbr_sn' name='mbr_sn' value='${human.mbr_sn}'>
+			      		<input type='hidden' id='mbr_sn' name='mbr_sn' value='${attend.atd_sn}'>
 						<input type='hidden' name='pageNum' value='${cri.pageNum}'>
 						<input type='hidden' name='amount' value='${cri.amount}'>
 			      	</form>

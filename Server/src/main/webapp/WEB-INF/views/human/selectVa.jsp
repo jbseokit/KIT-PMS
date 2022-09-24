@@ -7,67 +7,40 @@
 
 <main>
 	<div class="container-fluid px-4">
-		<h1 class="mt-4">사원 조회</h1>
+		<h1 class="mt-4">휴가 정보</h1>
 			<div>   
-	        	<button data-oper = "modify" class="btn btn-primary" onclick = "location.href = '/human/hr-modify?mbr_sn=${human.mbr_sn}'">수정</button>
-	            <button data-oper = "list" class="btn btn-info" onclick = "location.href = '/human/hr-list'">목록</button>
-	            <button data-oper = "remove" class="btn btn-danger" onclick = "location.href = '/human/hr-remove?mbr_sn=${human.mbr_sn}'">삭제</button>
+	        	<button data-oper = "modify" class="btn btn-primary" onclick = "location.href = '/human/va-modify?vac_sn=${vacation.vac_sn}'">수정</button>
+	            <button data-oper = "list" class="btn btn-info" onclick = "location.href = '/human/va-list'">목록</button>
+	          
             </div><p>
 			
 			<div class="card mb-2">
 			      	<div class="form-group">
-			      		<label>사번</label> <input class="form-control" name='mbr_sn' value='${human.mbr_sn}' readonly>
+			      		<label>사번</label> <input class="form-control" name='vac_sn' value='${vacation.vac_sn}' readonly>
 			    	</div><br>
 			
 			      	<div class="form-group">
-			      		<label>이름</label> <input class="form-control" name='mbr_nm' value='${human.mbr_nm}' readonly>
+			      		<label>이름</label> <input class="form-control" name='vac_nm' value='${vacation.vac_nm}' readonly>
 				  	</div><br>
 					
 					<div class="form-group">
-			            <label>사내번호</label> <input class="form-control" name='mbr_tel' value='${human.mbr_tel}' readonly>
+			            <label>휴가 시작일</label> <input class="form-control" name='vac_str' 
+			            		value='<fmt:formatDate pattern="yyyy-MM-dd" value="${vacation.vac_str}" />' readonly> 
 			        </div><br>
 			        
 			        <div class="form-group">
-			            <label>전화번호</label> <input class="form-control" name='mbr_phone' value='${human.mbr_phone}' readonly>
+			            <label>휴가 종료일</label> <input class="form-control" name='vac_end' 
+			            		value='<fmt:formatDate pattern="yyyy-MM-dd" value="${vacation.vac_end}" />' readonly> 
 			        </div><br>
 			        
 			        <div class="form-group">
-			            <label>이메일</label> <input class="form-control" name='mbr_em' value='${human.mbr_em}' readonly>
+			            <label>휴가 유형</label> <input class="form-control" name='vac_type' value='${vacation.vac_type}' readonly>
 			        </div><br>
 			        
 			        <div class="form-group">
-			            <label>주소</label> <input class="form-control" name='mbr_addr_bx' value='${human.mbr_addr_bx}' readonly>
+			            <label>휴가 사용일</label> <input class="form-control" name='vac_cnt' value='${vacation.vac_cnt}' readonly>
 			        </div><br>
-			        
-			        <div class="form-group">
-			            <label>상세주소</label> <input class="form-control" name='mbr_addr_dtl' value='${human.mbr_addr_dtl}' readonly>
-			        </div><br>
-			        
-			        <div class="form-group">
-			            <label>우편번호</label> <input class="form-control" name='mbr_addr_post' value='${human.mbr_addr_post}' readonly>
-			        </div><br>
-			        
-			        <div class="form-group">
-			            <label>부서번호</label> <input class="form-control" name='mbr_dep_cd' value='${human.mbr_dep_cd}' readonly>
-			        </div><br>
-			        
-			        <div class="form-group">
-			            <label>입사일</label> <input class="form-control" name='mbr_hired_d' 
-			            		value='<fmt:formatDate pattern="yyyy/MM/dd" value="${human.mbr_hired_d}" />' readonly> 
-			        </div><br>
-			        
-			        <div class="form-group">
-			            <label>아이디</label> <input class="form-control" name='mbr_id' value='${human.mbr_id}' readonly>
-			        </div><br>
-			        
-			        <div class="form-group">
-			            <label>비밀번호</label> <input class="form-control" name='mbr_pw' value='${human.mbr_pw}' readonly>
-			        </div><br>
-			        
-			        <div class="form-group">
-			            <label>직급코드</label> <input class="form-control" name='mbr_cls_cd' value='${human.mbr_cls_cd}' readonly>
-			    	</div><br>  
-		          	
+			 
 					<form id="operForm" action="/board/modify" method="get">
 			      		<input type='hidden' id='mbr_sn' name='mbr_sn' value='${human.mbr_sn}'>
 						<input type='hidden' name='pageNum' value='${cri.pageNum}'>
